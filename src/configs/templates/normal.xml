@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<component class="Component" order="1"/>
+	<component class="Label" order="1"/>
+	<component class="Button" order="1"/>
+</root>

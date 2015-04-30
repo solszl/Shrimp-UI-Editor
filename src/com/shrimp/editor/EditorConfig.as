@@ -11,7 +11,14 @@ package com.shrimp.editor
 	 */	
 	public class EditorConfig
 	{
-		private var componentConfig:Dictionary = new Dictionary();
+		
+		public static var configFolder:Array = [{folder:"configs/complexs/",type:"complexs"},
+												   {folder:"configs/components/",type:"components"},
+												   {folder:"configs/lists/",type:"lists"},
+												   {folder:"configs/templates/",type:"templates"}];
+		
+		//配置文件列表
+		private static var componentConfig:Dictionary = new Dictionary();
 		public function EditorConfig()
 		{
 		}
@@ -22,7 +29,7 @@ package com.shrimp.editor
 		 * @param value
 		 * 
 		 */		
-		public function set ComponentsConfig(key:String,value:Object):void
+		public static function componentsConfig(key:String,value:Object):void
 		{
 			//如果已经存在该名字组件,跳过
 			if(componentConfig[key]!=null)
@@ -39,7 +46,7 @@ package com.shrimp.editor
 		 * @param key
 		 * 
 		 */		
-		public function get configByKey(key:String):Object
+		public static function getConfigByKey(key:String):Object
 		{
 			if(componentConfig[key] == null)
 			{

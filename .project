@@ -22,6 +22,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>[source path] nineveh-responder</name>
+			<type>2</type>
+			<location>D:/framework/nineveh-responder</location>
+		</link>
+		<link>
 			<name>[source path] src</name>
 			<type>2</type>
 			<location>E:/shrimp/ShrimpUI/src</location>

@@ -50,5 +50,26 @@ package com.shrimp.utils
 		{
 			return fileURLs;
 		}
+		
+		public static function clearCache():void
+		{
+			fileURLs = [];
+		}
+		/**
+		 *	根据文件路径,返回file文件 
+		 * @param path
+		 * @return 
+		 * 
+		 */		
+		public static function getFile(path:String):File
+		{
+			var f:File = new File(path);
+			if(f.exists)
+			{
+				return f;
+			}
+			
+			return null;
+		}
 	}
 }

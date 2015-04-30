@@ -1,11 +1,16 @@
 package com.shrimp.editor.comps
 {
+	import appkit.responders.NResponder;
+	
+	import com.shrimp.AppCMD;
 	import com.shrimp.framework.ui.container.HBox;
 	import com.shrimp.framework.ui.controls.Label;
+	import com.shrimp.framework.ui.controls.RadioButton;
 	import com.shrimp.framework.ui.controls.box.RadioButtonGroup;
 	import com.shrimp.framework.ui.layout.HorizontalLayout;
 	
 	import flash.display.DisplayObjectContainer;
+	import flash.events.Event;
 	
 	/**
 	 *	 
@@ -36,6 +41,7 @@ package com.shrimp.editor.comps
 			
 			rbgPropertyValue = new RadioButtonGroup("",this);
 			rbgPropertyValue.layout = new HorizontalLayout();
+			rbgPropertyValue.addEventListener(Event.CHANGE,onChanged);
 		}
 		
 		/**
@@ -70,6 +76,13 @@ package com.shrimp.editor.comps
 		public function set propertyDefaultValue(index:int):void
 		{
 			rbgPropertyValue.selectedIndex = index;
+		}
+		
+		protected function onChanged(event:Event):void
+		{
+			var rbg:RadioButtonGroup = event.target as RadioButtonGroup;
+			var property:String = rbg.selectedItem.label;
+			NResponder.dispatch(AppCMD.COMP_PROPERTY_CHANGED,[lblPropertyName.text,property]);
 		}
 	}
 }

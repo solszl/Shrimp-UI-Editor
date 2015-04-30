@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		type: 类型  
+			1:文字类型的
+			2:单选类型的
+			3:复选类型的
+	-->
+	<property name="id" type="1" value=""/>
+	<property name="x" type="1" value=""/>
+	<property name="y" type="1" value=""/>
+	<property name="width" type="1" value=""/>
+	<property name="height" type="1" value=""/>
+	<property name="alpha" type="1" value=""/>
+	<property name="mouseEnabled" type="2" value="true,false" default="0"/> 
+	<property name="mouseChildren" type="2" value="true,false" default="0"/> 
+	<property name="left" type="1" value=""/>
+	<property name="right" type="1" value=""/>
+	<property name="top" type="1" value=""/>
+	<property name="bottom" type="1" value=""/>
+	<property name="verticalCenter" type="1" value=""/>
+	<property name="horizontalCenter" type="1" value=""/>
+	<property name="scaleX" type="1" value=""/>
+	<property name="scaleY" type="1" value=""/>
+	<property name="toolTip" type="1" value=""/>
+	<property name="guideName" type="1" value=""/>
+	<property name="showBorder" type="3" value="false"/>
+</root>
